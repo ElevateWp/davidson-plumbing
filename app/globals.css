@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --paper: #FFFFFF;
+    --paper-secondary: #F5F5F5;
+    --forest: #F15A24;
+    --forest-ink: #171717;
+    --black-accent: #292929;
+    --secondary-text: #666666;
+    --primary-brand: #F15A24;
+    --brand-hover: #FF7138;
+    --navy-accent: #292929;
+    --soft-blue: #F5F5F5;
+    --soft-orange: #FF9A52;
+    --lime: #FF9A52;
+    --orange: #F15A24;
+    --accent-yellow: #FF9A52;
+    --mist: #D9D9D9;
+    --silver-accent: #D9D9D9;
+    --metallic-grey: #666666;
+    --deep-section: #171717;
+    --font-display: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+    border-color: var(--mist);
+  }
+
+  html {
+    background-color: var(--paper);
+    color: var(--forest-ink);
+    font-family: var(--font-body);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--forest-ink);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* Display Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    color: inherit;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    max-width: 68ch;
+  }
+
+  /* Accessible Focus Ring */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid var(--primary-brand);
+    outline-offset: 3px;
+  }
+
+  /* Form Inputs */
+  input, select, textarea {
+    background-color: var(--paper);
+    color: var(--forest-ink);
+    border: 1px solid var(--mist);
+    border-radius: 8px;
+    font-family: var(--font-body);
+  }
+
+  /* Tabular Figures for Stats */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Skip to Content Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 16px;
+  background: var(--forest);
+  color: var(--paper);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  z-index: 9999;
+  font-size: 13px;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Noise & Organic Texture Styling */
+.organic-texture-container {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Custom Scrollbar for subtle elegance */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mist);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-brand);
+}
+
+/* Horizontal scroll containers — hide scrollbar visually but keep functional */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth horizontal scroll snapping for mobile cards */
+.snap-x {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.snap-center {
+  scroll-snap-align: center;
+}
+
+@keyframes hero-image-arrive {
+  from { transform: scale(1.06); }
+  to { transform: scale(1); }
+}
+
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translate3d(0, 22px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes hero-slide-in {
+  from { opacity: 0; transform: translate3d(32px, 0, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+.hero-image-motion {
+  animation: hero-image-arrive 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-fade-up {
+  animation: hero-fade-up 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+.hero-cta-enter {
+  animation: hero-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.42s both;
+}
+
+.hero-slide-in {
+  animation: hero-slide-in 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .no-reduced-motion {
+    display: none !important;
+  }
+}

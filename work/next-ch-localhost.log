@@ -1,0 +1,47 @@
+  ▲ Next.js 14.2.15
+  - Local:        http://127.0.0.1:3100
+  - Network:      http://127.0.0.1:3100
+
+ ✓ Starting...
+ ✓ Ready in 125.3s
+ ○ Compiling / ...
+ ✓ Compiled / in 24.2s (664 modules)
+ ✓ Compiled in 2.2s (307 modules)
+ GET / 200 in 26600ms
+ GET / 200 in 239ms
+ GET / 200 in 501ms
+ ✓ Compiled in 1321ms (664 modules)
+ GET / 200 in 360ms
+ ✓ Compiled in 1523ms (664 modules)
+ GET / 200 in 590ms
+ ✓ Compiled in 1291ms (664 modules)
+ ✓ Compiled in 1719ms (664 modules)
+ GET / 200 in 459ms
+ ✓ Compiled in 1115ms (664 modules)
+ ○ Compiling /our-team ...
+ ✓ Compiled /our-team in 2.7s (661 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 2.7s (664 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 3299ms
+ ✓ Compiled in 2.9s (675 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 218ms
+ ✓ Compiled in 884ms (675 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 125ms
+ GET /our-team/ 200 in 660ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 74ms
+ ✓ Compiled in 1632ms (675 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 221ms
+ ✓ Compiled in 2.9s (672 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 868ms (675 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1286ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 48ms
+ GET /our-team/ 200 in 1218ms
+ GET / 200 in 401ms
+ GET /our-team/ 200 in 880ms
+ GET /our-team/ 200 in 211ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 82ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 52ms
+ GET / 200 in 166ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 73ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 83ms
